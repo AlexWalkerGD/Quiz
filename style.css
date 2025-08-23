@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(114, 65, 248);
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    font-family: "Inter", sans-serif;
+}
+
+#container{
+    height: 450px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container h1{
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+
+#field{
+    background: white;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding-top: 30px;
+    font-size: 19px;
+    font-weight: 500;
+    gap: 20px;
+}
+
+#field p{
+    width: 80%;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    width: 90%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px 0 5px 0;
+}
+
+ul li {
+    border: 2px solid rgba(0, 0, 0, 0.047);
+    border-radius: 9px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.034);
+    background: white;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+ul li:hover{
+    background: rgb(247, 247, 247);
+}
+
+.selected{
+    border: 2px solid rgb(114, 65, 248);
+}
+
+.correct{
+    border: 2px solid rgb(77, 247, 105);
+}
+
+#field button{
+    background: rgb(241, 102, 56);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    width: 90%;
+    height: 14%;
+    cursor: pointer;
+}
+
+#field button:hover{
+    background: rgb(216, 90, 49);
+}
