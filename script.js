@@ -48,10 +48,13 @@ const quiz = [
 
 let currentQuestion = 0;
 var isSelected = false;
+var isSubmit = false;
 
 function submit(){
 
-    if(isSelected){
+    if(isSelected && !isSubmit){
+      
+        isSubmit = true;
         let items = document.querySelectorAll("#answer");
         items.forEach((item, index) => {
             if(index === quiz[currentQuestion].correct) {      
@@ -85,6 +88,7 @@ function refreshQuest (){
     li.textContent = quiz[currentQuestion].options[index];
     });
     isSelected = false;
+    isSubmit = false;
 }
 
 let items = document.querySelectorAll("#answer");
@@ -92,8 +96,10 @@ let items = document.querySelectorAll("#answer");
 items.forEach(item => {
 
     item.addEventListener("click", () => {
-        items.forEach(i => i.classList.remove("selected"));
-        item.className = "selected";
-        isSelected = true;
+        if(!isSubmit){
+          items.forEach(i => i.classList.remove("selected"));
+          item.className = "selected";
+          isSelected = true;
+        } 
     });
 });
